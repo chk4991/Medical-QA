@@ -8,13 +8,16 @@
 ###Usage
 
 #####Knowledge storage
+
     cd graph_database
     python create_graph.py
 
 #####Train
+
     rasa train
 
 #####Deploy
+
     rasa run actions --actions actions
     rasa shell
 
@@ -23,6 +26,7 @@
 ![Image text](pic/2.png)
 
 ### Warning：
+
 1、需要启动neo4j服务
 
 ###Todo

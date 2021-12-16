@@ -1,0 +1,88 @@
+version: "2.0"
+
+slots:
+  disease:
+    type: text
+#    mappings:
+#    - type: from_entity
+#      entity: disease
+  symptom:
+    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: symptom
+  dept:
+    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: dept
+  drug:
+    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: drug
+  food:
+    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: food
+  sure:
+    type: any
+#    mappings:
+#      - type: from_entity
+#        entity: symptom
+  pre_disease:
+    type: any
+#    mappings:
+#      - type: from_entity
+#        entity: symptom
+
+intents:
+  - first:
+      triggers: action_first
+  - greet
+  - bye
+  - affirmative
+  - search_food
+  - search_drug
+  - search_symptom
+  - sure
+
+entities:
+- disease
+
+responses:
+  utter_first:
+  - text: "您好，我是您的医疗助手Friende，我是个机器人，请问有什么可以帮您？"
+  utter_greet:
+  - text: "您好～"
+  - text: "您好呀～"
+  - text: "Hello!!!"
+  utter_goodbye:
+  - text: "再见，祝您身体健康😀"
+  - text: "拜拜，希望我有帮到您😊"
+  - text: "byebye！ 身体健康，万事如意哦···"
+  utter_howcanhelp:
+  - text: "您可以这样向我提问: 头痛怎么办/
+                              什么人容易头痛/
+                              头痛吃什么药/
+                              头痛能治吗/
+                              头痛属于什么科/
+                              头孢地尼分散片用途/
+                              如何防止头痛/
+                              头痛要治多久/
+                              糖尿病有什么并发症/
+                              糖尿病有什么症状"
+  utter_donknow:
+  - text: "啊噢，我没有理解您说的话，我的理解力还需要更多的提升>_<。"
+
+actions:
+- action_first
+- action_donknow
+- action_search_food
+- action_search_symptom
+- action_search_drug
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

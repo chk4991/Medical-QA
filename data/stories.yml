@@ -1,0 +1,85 @@
+version: "2.0"
+
+stories:
+
+
+- story: bot_start
+  steps:
+    - intent: first
+    - action: utter_greet
+
+- story: search_drug_symptom
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_drug
+    - action: action_search_drug
+    - intent: search_symptom
+    - action: action_search_symptom
+    - intent: bye
+    - action: utter_goodbye
+
+- story: search_symptom_drug
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_symptom
+    - action: action_search_symptom
+    - intent: search_drug
+    - action: action_search_drug
+    - intent: bye
+    - action: utter_goodbye
+
+- story: search_food_1
+  steps:
+    - intent: search_food
+    - action: action_search_food
+
+- story: search_food_2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_food
+    - action: action_search_food
+    - intent: bye
+    - action: utter_goodbye
+
+- story: search_symptom_1
+  steps:
+    - intent: search_symptom
+    - action: action_search_symptom
+
+- story: search_symptom_2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_symptom
+    - action: action_search_symptom
+    - intent: bye
+    - action: utter_goodbye
+
+- story: search_drug_1
+  steps:
+    - intent: search_drug
+    - action: action_search_drug
+
+- story: search_drug_2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_drug
+    - action: action_search_drug
+    - intent: bye
+    - action: utter_goodbye
+
+- story: greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: bye
+  steps:
+    - intent: bye
+    - action: utter_goodbye
+
+

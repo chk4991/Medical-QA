@@ -1,0 +1,56 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: zh
+
+pipeline:
+- name: "SpacyNLP"
+  model: "zh_core_web_sm"
+- name: "JiebaTokenizer"
+  dictionary_path: "./jieba_userdict"
+  # Flag to check whether to split intents
+  "intent_tokenization_flag": False
+  # Symbol on which intent should be split
+  "intent_split_symbol": "_"
+  # Regular expression to detect tokens
+  "token_pattern": None
+#- name: "CountVectorsFeaturizer"
+#  # Analyzer to use, either 'word', 'char', or 'char_wb'
+#  "analyzer": "word"
+#  # Set the lower and upper boundaries for the n-grams
+#  "min_ngram": 1
+#  "max_ngram": 8
+#  # Set the out-of-vocabulary token
+#  "OOV_token": "_oov_"
+#  # Whether to use a shared vocab
+#  "use_shared_vocab": true
+- name: LanguageModelFeaturizer
+    # Name of the language model to use
+  model_name: "bert"
+    # Pre-Trained weights to be loaded
+  model_weights: bert-base-chinese
+
+    # An optional path to a directory from which
+    # to load pre-trained model weights.
+    # If the requested model is not found in the
+    # directory, it will be downloaded and
+    # cached in this directory for future use.
+    # The default value of `cache_dir` can be
+    # set using the environment variable
+    # `TRANSFORMERS_CACHE`, as per the
+    # Transformers library.
+  cache_dir: "D:/pycharm project/pretrain_model/bert-base-chinese/"
+- name: "DIETClassifier"
+  epochs: 50
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+- name: MappingPolicy
+- name: TEDPolicy
+  epochs: 100
+  max_history: 5
+  constrain_similarities: True

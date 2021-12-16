@@ -22,8 +22,7 @@
     rasa shell
 
 ## Example
-
-![Image text](pic/1.png)
+<img src="https://github.com/chk4991/Medical-QA/blob/master/pic/1.png?raw=true">
 
 ![Image text](pic/2.png)
 

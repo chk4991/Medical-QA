@@ -35,4 +35,4 @@
 
 1、美化打印信息
 
-2、加入更多intent和story，扩展功能
+2、扩展story和intent类别，提升问答能力

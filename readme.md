@@ -25,7 +25,7 @@
 
 ![Image text](https://s3.bmp.ovh/imgs/2021/12/5033b0db20e8dc9b.png)
 
-![Image text](http://github.com/chk4991/Medical-QA/raw/master/pic/2.png)
+![Image text](https://s3.bmp.ovh/imgs/2021/12/eecf7db34a4937cb.png)
 
 ## Warning：
 

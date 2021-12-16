@@ -16,7 +16,7 @@
 
     rasa train
 
-#### Deploy
+#### Demo
 
     rasa run actions --actions actions
     rasa shell

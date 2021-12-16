@@ -19,8 +19,8 @@
     rasa shell
 
 ### Example
-![Image text](pic/1.png)
-![Image text](pic/2.png)
+![Image text](https://github.com/chk4991/Medical-QA/blob/master/pic/1.png)
+![Image text](https://github.com/chk4991/Medical-QA/blob/master/pic/2.png)
 
 ### Warning：
 1、需要启动neo4j服务

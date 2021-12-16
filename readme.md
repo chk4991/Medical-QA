@@ -1,35 +1,35 @@
 # 基于医疗知识图谱的问答系统
 
-### Introduction
+## Introduction
 
 实现一个基于rasa的问答系统， 支持的意图有：查询疾病相应的症状、
 疾病对应的药物、疾病对应忌口的食物等3种意图；可以根据疾病名称做进一步筛选
 
-### Usage
+## Usage
 
-##### Knowledge storage
+#### Knowledge storage
 
     cd graph_database
     python create_graph.py
 
-##### Train
+#### Train
 
     rasa train
 
-##### Deploy
+#### Deploy
 
     rasa run actions --actions actions
     rasa shell
 
-### Example
+## Example
 ![Image text](pic/1.png)
 ![Image text](pic/2.png)
 
-### Warning：
+## Warning：
 
 1、需要启动neo4j服务
 
-### Todo
+## Todo
 
 1、美化候选疾病打印信息
 

@@ -24,6 +24,7 @@
 ## Example
 
 ![Image text](http://github.com/chk4991/Medical-QA/raw/master/pic/1.png)
+
 ![Image text](http://github.com/chk4991/Medical-QA/raw/master/pic/2.png)
 
 ## Warning：

@@ -5,6 +5,9 @@
 实现一个基于rasa的问答系统， 支持的意图有：查询疾病相应的症状、
 疾病对应的药物、疾病对应忌口的食物等3种意图；可以根据疾病名称做进一步筛选
 
+## Install
+    pip install -r requirements.txt
+
 ## Usage
 
 #### Knowledge storage
